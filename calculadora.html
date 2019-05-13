@@ -12,8 +12,14 @@
 <span>X</span>
 <input type="number" name="número2">
 <button type="button" class="btn btn-primary" onclick="multiplicar()">Multiplicar</button>
+<<<<<<< HEAD
 <button type="button" class="btn btn-danger" onclick="seno()">Seno N1</button>
 <button type="button" class="btn btn-info" onclick="resetear()">Resetear</button>
+=======
+<button type="button" class="btn btn-danger" onclick="resetear()">resetear</button>
+
+
+>>>>>>> master
 <h2>RESULTADO: </h2>
 
 
@@ -26,7 +32,15 @@
 	
 		var numeros = document.getElementsByTagName("input");
 		function multiplicar(){
-			document.getElementsByTagName("h2")[0].innerHTML += numeros[0].value*numeros[1].value;
+			var resultado = document.getElementsByTagName("h2")[0].innerHTML += numeros[0].value*numeros[1].value;
+			document.getElementsByTagName("h2").innerHTML += " " +resultado;
+		}
+
+		function resetear(){
+			numeros[0].value = "";
+			numeros[1].value = "";
+			document.getElementsByTagName("h2")[0].innerHTML = "RESULTADO";
+
 		}
 
 		function resetear(){
